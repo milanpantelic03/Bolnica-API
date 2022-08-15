@@ -12,11 +12,11 @@ mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napr
 - (POST) <b><a>bolnica-api.herokuapp.com/api/pacijenti</a></b>  -> Kreira pacijenta tako što iz requesta izvlaci "ime" i "prezime", a BROJ kartona se automatski kreira i skladišti u bazu podataka radi logičkog povezivanja sa tabelom "dijagnoze"!
 - (POST) <b><a>bolnica-api.herokuapp.com/api/dijagnoze</a><b>  -> Kreira dijagnozu tako što iz requesta izvlači "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", i "broj_kartona". Broj kartona dalje u bekendu prolazi kroz proveru da li pacijent sa tim brojem kartona postoji, ako postoji dijagnoza će biti kreirana i spakovana u bazu podataka!
 
-- (DELETE) <b><a>bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a><b> -> Briše pacijenta sa unetim brojem kartona u endpoint
-- (DELETE) <b><a>bolnica-api.herokuapp.com/api/dijagnoze/{id}</a><b> -> Briše dijagnozu čiji je id unet u {id}, id dijagnoze se može izvući GET requestom ka dijagnozama
+- (DELETE) <b><a>bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a></b> -> Briše pacijenta sa unetim brojem kartona u endpoint
+- (DELETE) <b><a>bolnica-api.herokuapp.com/api/dijagnoze/{id}</a></b> -> Briše dijagnozu čiji je id unet u {id}, id dijagnoze se može izvući GET requestom ka dijagnozama
 
-- (PATCH) <b><a>bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a><b> -> Menja "ime" i "prezime" ili i "ime" i "prezime" pacijenta u zavisnosti šta pošaljete u PATCH requestu preko broja kartona
-- (PATCH)<b><a>bolnica-api.herokuapp.com/api/dijagnoze/{id}</a><b> -> Menja parametre dijagnoze targetovane preko id-ja, Parametri: "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", BROJ KARTONA nije moguće izmeniti jer je on konstantan za svakog pacijenta.
+- (PATCH) <b><a>bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a></b> -> Menja "ime" i "prezime" ili i "ime" i "prezime" pacijenta u zavisnosti šta pošaljete u PATCH requestu preko broja kartona
+- (PATCH)<b><a>bolnica-api.herokuapp.com/api/dijagnoze/{id}</a></b> -> Menja parametre dijagnoze targetovane preko id-ja, Parametri: "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", BROJ KARTONA nije moguće izmeniti jer je on konstantan za svakog pacijenta.
 
 ## Deploy:
 Za deploy ovog projekta koristio sam heroku, kojeg sam konfigurisao da prati izmene main brancha ovog repozitorijuma!
