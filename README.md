@@ -20,3 +20,4 @@ mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napr
 
 ## Deploy:
 Za deploy ovog projekta koristio sam heroku, kojeg sam konfigurisao da prati izmene main brancha ovog repozitorijuma!
+
