@@ -1,18 +1,11 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Bolnica API
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bolnica API je bekend projekat nastao u php frameworku Laravel. Obrađuje GET, POST, DELETE I PATCH requestove i omogućava zamišljenom frontendu da komunicira sa
+mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napravio sam frontend interfejs koristeći JavaScript, HTML i CSS koji se nalazi na index stranici URL-a <a href = "https://bolnica-api.herokuapp.com/"> OVDE </a>, međutim, ako želite spisak svih ENDPOINTOVA sastavio sam listu:
 
-## Bolnica-API endpoints
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- (GET)
-- (GET)
+## Endpoints:
+- (GET) <a href = "https://bolnica-api.herokuapp.com/api/pacijenti">https://bolnica-api.herokuapp.com/api/pacijenti</a>   -> Izbacuje listu svih pacijenata u bazi podataka koji se izvlace iz posebne tabele "pacijenti"
+- (GET) <a href = "https://bolnica-api.herokuapp.com/api/dijagnoze">https://bolnica-api.herokuapp.com/api/dijagnoze</a>   -> Izbacuje listu svih dijagnoza u bazi podataka koje se izvlace iz posebne table "dijagnoze", 
 - (GET)
 - (GET)
 
