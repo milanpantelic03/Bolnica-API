@@ -9,8 +9,8 @@ mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napr
 - (GET) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona} </a> -> Izbacuje pacijenta sa specifičnim brojem kartona
 - (GET) <a>https://bolnica-api.herokuapp.com/api/dijagnoze/{broj_kartona} </a> -> Izbacuje sve dijagnoze pacijenta sa dodatim brojem kartona
 
-- (POST) <a href ="#">bolnica-api.herokuapp.com/api/pacijenti</a>  -> Kreira pacijenta tako što iz requesta izvlaci "ime" i "prezime", a BROJ kartona se automatski kreira i skladišti u bazu podataka radi logičkog povezivanja sa tabelom "dijagnoze"!
-- (POST) <a>bolnica-api.herokuapp.com/api/dijagnoze</a>  -> Kreira dijagnozu tako što iz requesta izvlači "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", i "broj_kartona". Broj kartona dalje u bekendu prolazi kroz proveru da li pacijent sa tim brojem kartona postoji, ako postoji dijagnoza će biti kreirana i spakovana u bazu podataka!
+- (POST) <a href ="">bolnica-api.herokuapp.com/api/pacijenti</a>  -> Kreira pacijenta tako što iz requesta izvlaci "ime" i "prezime", a BROJ kartona se automatski kreira i skladišti u bazu podataka radi logičkog povezivanja sa tabelom "dijagnoze"!
+- (POST) <a href = "">bolnica-api.herokuapp.com/api/dijagnoze</a>  -> Kreira dijagnozu tako što iz requesta izvlači "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", i "broj_kartona". Broj kartona dalje u bekendu prolazi kroz proveru da li pacijent sa tim brojem kartona postoji, ako postoji dijagnoza će biti kreirana i spakovana u bazu podataka!
 
 - (DELETE) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a> -> Briše pacijenta sa unetim brojem kartona u endpoint
 - (DELETE) <a>https://bolnica-api.herokuapp.com/api/dijagnoze/{id}</a> -> Briše dijagnozu čiji je id unet u {id}, id dijagnoze se može izvući GET requestom ka dijagnozama
