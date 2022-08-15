@@ -18,3 +18,5 @@ mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napr
 - (PATCH) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a> -> Menja "ime" i "prezime" ili i "ime" i "prezime" pacijenta u zavisnosti šta pošaljete u PATCH requestu preko broja kartona
 - (PATCH)<a>https://bolnica-api.herokuapp.com/api/dijagnoze/{id}</a> -> Menja parametre dijagnoze targetovane preko id-ja, Parametri: "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", BROJ KARTONA nije moguće izmeniti jer je on konstantan za svakog pacijenta.
 
+## Deploy:
+Za deploy ovog projekta koristio sam heroku, kojeg sam konfigurisao da prati izmene main brancha ovog repozitorijuma!
