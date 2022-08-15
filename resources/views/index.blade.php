@@ -205,6 +205,9 @@
             width: 800px;
             text-align: justify;
             padding: 20px;
+            
+            
+            width: 80vW;
 
            
         }
