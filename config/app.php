@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'key' => env('APP_KEY', 'SomeRandomStringSomeRandomString'),
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
