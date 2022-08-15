@@ -5,59 +5,16 @@ mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napr
 
 ## Endpoints:
 - (GET) <a href = "https://bolnica-api.herokuapp.com/api/pacijenti">https://bolnica-api.herokuapp.com/api/pacijenti</a>   -> Izbacuje listu svih pacijenata u bazi podataka koji se izvlace iz posebne tabele "pacijenti"
-- (GET) <a href = "https://bolnica-api.herokuapp.com/api/dijagnoze">https://bolnica-api.herokuapp.com/api/dijagnoze</a>   -> Izbacuje listu svih dijagnoza u bazi podataka koje se izvlace iz posebne table "dijagnoze",dijagnoze su logički povezane sa pacijentima putem BROJA KARTONA, koji se pri kreiranju pacijenta POST requestom automatski generiše i ubacuje u tabelu "pacijenti", a kasnije služi kao dopuna endpointu POST requesta za kreiranje dijagnoza, da bi backend logički povezao dijagnozu i pacijenta!
+- (GET) <a href = "https://bolnica-api.herokuapp.com/api/dijagnoze">https://bolnica-api.herokuapp.com/api/dijagnoze</a>   -> Izbacuje listu svih dijagnoza u bazi podataka koje se izvlace iz posebne table "dijagnoze". Dijagnoze su logički povezane sa pacijentima putem BROJA KARTONA, koji se pri kreiranju pacijenta POST requestom automatski generiše i ubacuje u tabelu "pacijenti", a kasnije služi kao dopuna endpointu POST requesta za kreiranje dijagnoza, da bi backend logički povezao dijagnozu i pacijenta!
 - (GET) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona} </a> -> Izbacuje pacijenta sa specifičnim brojem kartona
 - (GET) <a>https://bolnica-api.herokuapp.com/api/dijagnoze/{broj_kartona} </a> -> Izbacuje sve dijagnoze pacijenta sa dodatim brojem kartona
 
-- (POST)
-- (POST)
+- (POST) <a>https://bolnica-api.herokuapp.com/api/pacijenti</a>  -> Kreira pacijenta tako što iz requesta izvlaci "ime" i "prezime", a BROJ kartona se automatski kreira i skladišti u bazu podataka radi logičkog povezivanja sa tabelom "dijagnoze"!
+- (POST) <a>https://bolnica-api.herokuapp.com/api/dijagnoze</a>  -> Kreira dijagnozu tako što iz requesta izvlači "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", i "broj_kartona". Broj kartona dalje u bekendu prolazi kroz proveru da li pacijent sa tim brojem kartona postoji, ako postoji dijagnoza će biti kreirana i spakovana u bazu podataka!
 
-- (DELETE)
-- (DELETE)
+- (DELETE) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a> -> Briše pacijenta sa unetim brojem kartona u endpoint
+- (DELETE) <a>https://bolnica-api.herokuapp.com/api/dijagnoze/{id}</a> -> Briše dijagnozu čiji je id unet u {id}, id dijagnoze se može izvući GET requestom ka dijagnozama
 
-- (PATCH)
-- (PATCH)
+- (PATCH) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona}</a> -> Menja "ime" i "prezime" ili i "ime" i "prezime" pacijenta u zavisnosti šta pošaljete u PATCH requestu preko broja kartona
+- (PATCH)<a>https://bolnica-api.herokuapp.com/api/dijagnoze/{id}</a> -> Menja parametre dijagnoze targetovane preko id-ja, Parametri: "naziv_bolesti", "trenutna_terapija", "stanje_pacijenta", BROJ KARTONA nije moguće izmeniti jer je on konstantan za svakog pacijenta.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
