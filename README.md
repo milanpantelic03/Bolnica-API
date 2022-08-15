@@ -5,10 +5,9 @@ mySQL bazom podataka koja je srž celog API- ja! Za lakši pregled API - ja napr
 
 ## Endpoints:
 - (GET) <a href = "https://bolnica-api.herokuapp.com/api/pacijenti">https://bolnica-api.herokuapp.com/api/pacijenti</a>   -> Izbacuje listu svih pacijenata u bazi podataka koji se izvlace iz posebne tabele "pacijenti"
-- (GET) <a href = "https://bolnica-api.herokuapp.com/api/dijagnoze">https://bolnica-api.herokuapp.com/api/dijagnoze</a>   -> Izbacuje listu svih dijagnoza u bazi podataka koje se izvlace iz posebne table "dijagnoze", 
-- (GET)
-- (GET)
-
+- (GET) <a href = "https://bolnica-api.herokuapp.com/api/dijagnoze">https://bolnica-api.herokuapp.com/api/dijagnoze</a>   -> Izbacuje listu svih dijagnoza u bazi podataka koje se izvlace iz posebne table "dijagnoze",dijagnoze su logički povezane sa pacijentima putem BROJA KARTONA, koji se pri kreiranju pacijenta POST requestom automatski generiše i ubacuje u tabelu "pacijenti", a kasnije služi kao dopuna endpointu POST requesta za kreiranje dijagnoza, da bi backend logički povezao dijagnozu i pacijenta!
+- (GET) <a>https://bolnica-api.herokuapp.com/api/pacijenti/{broj_kartona} </a> -> Izbacuje pacijenta sa specifičnim brojem kartona
+- (GET) <a>https://bolnica-api.herokuapp.com/api/dijagnoze/{broj_kartona} </a> -> Izbacuje sve dijagnoze pacijenta sa dodatim brojem kartona
 
 - (POST)
 - (POST)
