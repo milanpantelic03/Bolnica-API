@@ -75,7 +75,7 @@
             if(broj_kartona == ""){
                 alert("Posto niste uneli broj kartona po kome cete vrsiti ciljanu pretragu dijagnoza kojima pripada taj broj kartona, uputicemo vas na endpoint svih dijagnoza!");
             }
-            window.open('http://localhost:8000/api/dijagnoze/'+broj_kartona, '_blank');
+            window.open('https://bolnica-api.herokuapp.com/api/dijagnoze/'+broj_kartona, '_blank');
             
         }
         function prikPacijenta(){
@@ -85,7 +85,7 @@
             if(broj_kartona == ""){
                 alert("Posto niste uneli broj kartona po kome cete vrsiti ciljanu pretragu pacijenta kome pripada taj broj kartona, uputicemo vas na endpoint svih pacijenata!");
             }
-            window.open('http://localhost:8000/api/pacijenti/'+broj_kartona, '_blank');
+            window.open('https://bolnica-api.herokuapp.com/api/pacijenti/'+broj_kartona, '_blank');
 
         }
         function pacijentiUpdate(){
