@@ -274,12 +274,12 @@
     <h2>Get:</h2>
 
     <div class = "endpoint">
-        <a>(GET) </a>  <a href = "http://localhost:8000/api/pacijenti" target= "_blank"> api/pacijenti </a>
+        <a>(GET) </a>  <a href = "/api/pacijenti" target= "_blank"> api/pacijenti </a>
         <br>
     </div>
 
     <div class = "endpoint">
-        <a>(GET) </a><a href = "http://localhost:8000/api/dijagnoze" target = "_blank">api/dijagnoze</a>
+        <a>(GET) </a><a href = "/api/dijagnoze" target = "_blank">api/dijagnoze</a>
         <br>
     </div>
 
